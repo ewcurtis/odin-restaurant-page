@@ -1,13 +1,35 @@
+import './styles.css';
+
 
  function component() {
-    const element = document.createElement('div');
- 
-   // Lodash, currently included via a script, is required for this line to work
- 
-   // Lodash, now imported by this script
-    element.innerHTML = "Hello World!";
- 
-    return element;
+    const content = document.createElement('div');
+    content.setAttribute("class", "content");
+    content.textContent = "Hello World!";
+
+    const nav = document.createElement('div');
+    nav.setAttribute("class", "navbar");
+
+    const home = document.createElement("button");
+    home.textContent = "Home";
+
+    const menu = document.createElement("button");
+    menu.textContent = "Menu";
+
+    const contact = document.createElement("button");
+    contact.textContent = "Contact";
+
+    nav.appendChild(home);
+    nav.appendChild(menu);
+    nav.appendChild(contact);
+
+    content.appendChild(nav);
+
+
+    const main = document.createElement("div");
+    main.setAttribute("class", "main");
+    content.appendChild(main);
+    
+    return content;
   }
  
   document.body.appendChild(component());
