@@ -4,5 +4,29 @@ body {
 }
 
 .content {
-    color: red;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr) 2fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.navbar {
+    grid-area: 2 / 2 / 3 / 5;
+    display: flex;
+    
+    
+}
+
+.navbar button {
+    flex: 1;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: rgba(40,40,40,1);
+    color: darkred;
+
+}
+
+.main {
+    grid-area: 3 / 2 / 4 / 4;
 }

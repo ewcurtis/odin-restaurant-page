@@ -4,7 +4,7 @@ import './styles.css';
  function component() {
     const content = document.createElement('div');
     content.setAttribute("class", "content");
-    content.textContent = "Hello World!";
+    
 
     const nav = document.createElement('div');
     nav.setAttribute("class", "navbar");
@@ -27,6 +27,7 @@ import './styles.css';
 
     const main = document.createElement("div");
     main.setAttribute("class", "main");
+    main.textContent = "hi";
     content.appendChild(main);
     
     return content;
