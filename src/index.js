@@ -5,6 +5,23 @@ import './styles.css';
     const content = document.createElement('div');
     content.setAttribute("class", "content");
     
+    const credits = document.createElement("div");
+    credits.setAttribute("class", "credits");
+    credits.textContent = 'Photo by ';
+
+    const aName = document.createElement("a");
+    aName.setAttribute("href", "https://unsplash.com/@firedorange717?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText");
+    aName.textContent = "Joshua Kantarges ";
+    credits.appendChild(aName);
+    credits.appendChild(document.createTextNode("on"));
+
+
+    const usplash = document.createElement("a");
+    usplash.setAttribute("href", "https://unsplash.com/s/photos/grill-fire?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText");
+    usplash.textContent = " Usplash";
+    credits.appendChild(usplash);
+    
+    content.appendChild(credits);
 
     const nav = document.createElement('div');
     nav.setAttribute("class", "navbar");
@@ -27,7 +44,7 @@ import './styles.css';
 
     const main = document.createElement("div");
     main.setAttribute("class", "main");
-    main.textContent = "hi";
+    
     content.appendChild(main);
     
     return content;
