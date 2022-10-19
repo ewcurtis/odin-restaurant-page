@@ -1,4 +1,7 @@
 import './styles.css';
+import homeScreen from './home.js';
+import contactScreen from './contact.js';
+import menuScreen from './menu.js';
 
 
  function component() {
@@ -23,27 +26,49 @@ import './styles.css';
     
     content.appendChild(credits);
 
+    //main content
+    const main = document.createElement("div");
+    main.setAttribute("class", "main");
+
+    //navbar
     const nav = document.createElement('div');
     nav.setAttribute("class", "navbar");
 
     const home = document.createElement("button");
     home.textContent = "Home";
 
+    home.addEventListener("click", () => {
+      while (main.firstChild) {
+        main.removeChild(main.firstChild);
+      }
+      main.appendChild(homeScreen());
+    });
+
     const menu = document.createElement("button");
     menu.textContent = "Menu";
 
+    menu.addEventListener("click", () => {
+      while (main.firstChild) {
+        main.removeChild(main.firstChild);
+      }
+      main.appendChild(menuScreen());
+    })
+
     const contact = document.createElement("button");
     contact.textContent = "Contact";
+
+    contact.addEventListener("click", () => {
+      while (main.firstChild) {
+        main.removeChild(main.firstChild);
+      }
+      main.appendChild(contactScreen());
+    });
 
     nav.appendChild(home);
     nav.appendChild(menu);
     nav.appendChild(contact);
 
     content.appendChild(nav);
-
-
-    const main = document.createElement("div");
-    main.setAttribute("class", "main");
     
     content.appendChild(main);
     
