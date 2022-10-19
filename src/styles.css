@@ -12,11 +12,17 @@ body {
 
 }
 
+img {
+    height: 15rem;
+    width: 15rem;
+}
+
 .content {
     display: grid;
     grid-template-columns: 2fr repeat(3, 1fr) 2fr;
-    grid-template-rows: repeat(5, 1fr);
-    gap: 2rem;
+    grid-template-rows: 2rem 4rem repeat(auto-fit, minmax(15rem, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1rem;
 }
 
 .navbar {
@@ -36,7 +42,8 @@ body {
 }
 
 .main {
-    grid-area: 3 / 2 / -1 / 5;
+    grid-area: 3 / 2 / auto / 5;
+    margin: 1rem 0;
     
     
 }
@@ -44,4 +51,20 @@ body {
 .main, .navbar button {
     border: 3px solid darkred;
     background-color: rgba(40,40,40,1);
+}
+
+/*Classes for home component*/
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.home h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }

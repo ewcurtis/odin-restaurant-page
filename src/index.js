@@ -29,6 +29,7 @@ import menuScreen from './menu.js';
     //main content
     const main = document.createElement("div");
     main.setAttribute("class", "main");
+    main.appendChild(homeScreen());
 
     //navbar
     const nav = document.createElement('div');
