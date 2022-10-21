@@ -1,5 +1,5 @@
 import "./styles.css";
-import burgerPic from "./blackbean.jpg";
+import burgerPic from "./burger.jpeg";
 import wingsPic from "./wings-promo.jpg";
 import shakesPic from "./shakes.jpg";
 
@@ -11,17 +11,34 @@ function homeComponent() {
 
     content.appendChild(greeting);
 
+    const food = document.createElement("div");
+    food.setAttribute("class", "home-food");
+
     const burger = new Image();
     burger.src = burgerPic;
-    content.appendChild(burger);
+    food.appendChild(burger);
 
     const wings = new Image();
     wings.src = wingsPic;
-    content.appendChild(wings);
+    food.appendChild(wings);
 
     const shakes = new Image();
     shakes.src = shakesPic;
-    content.appendChild(shakes);
+    food.appendChild(shakes);
+    content.appendChild(food);
+
+    const hours = document.createElement("h1");
+    hours.textContent = "Hours";
+    hours.style.textDecoration = "underline";
+    content.appendChild(hours);
+
+    const open = document.createElement("h1");
+    open.textContent = "Monday - Saturday: 10am - 3pm";
+    content.appendChild(open);
+
+    const closed = document.createElement("h1");
+    closed.textContent = "Sunday: closed";
+    content.appendChild(closed);
     return content;
 }
 
