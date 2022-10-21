@@ -67,10 +67,10 @@ function menuComponent() {
     content.appendChild(sides);
 
     content.appendChild(item("Sweet Potato Fries", "Sweet potato fries.",
-    3.50, sweetPotatoFries));
+    3, sweetPotatoFries));
 
     content.appendChild(item("Smash Tots®", "Crispy golden brown tots tossed in rosemary, garlic, & olive oil.",
-    2.50, tots));
+    2, tots));
 
     content.appendChild(item("Crispy Brussels Sprouts", "Crispy brussels tossed with garlic, spices, served with ranch.",
     3, sprouts));

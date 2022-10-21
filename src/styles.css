@@ -13,8 +13,8 @@ body {
 }
 
 img {
-    height: 12rem;
-    width: 16rem;
+    height: 10rem;
+    width: 14rem;
 }
 
 .content {
@@ -101,7 +101,7 @@ img {
 }
 
 .menu-card {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     text-align: center;
     align-self: center;
     display: grid;
@@ -122,7 +122,7 @@ img {
 .food-desc, .price {
     font-style: italic;
     grid-row: 2 / 3;
-    padding: 0.1rem;
+    padding: 0.2rem;
 }
 
 .food-name, .price {
@@ -131,7 +131,7 @@ img {
 
 .price {
     align-self: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
     position: relative;
     top: 0.05rem;
 }
